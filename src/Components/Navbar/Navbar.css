@@ -1,0 +1,144 @@
+
+:root {
+ --bg1:#29AAE1;
+ --bg2:#00C893;
+ --bg3:#1a161f;
+ --bg4:#528070;
+ --bg5:#3d404d;
+ --bg6:#0f0f0f;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 10% 85%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 1;
+    background-color: var(--bg1);
+    align-items: center;
+  }
+  
+ 
+  
+  .logo img {
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+  }
+  
+  .nav-content {
+    display: grid;
+    grid-template-columns: 80% 20%;
+  }
+  
+  .nav-content ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    gap: 20px;
+  }
+  
+  .nav-content ul li:hover {
+    color: rgb(226, 111, 11);
+    cursor: pointer;
+  }
+  
+  .menubar {
+    display: none;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon button {
+    padding: 14px 20px;
+    background-color: teal;
+    color: white;
+    border: transparent;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close {
+    display: none;
+  }
+  
+  .close button {
+    border: transparent;
+    background-color: transparent;
+    font-size: 25px;
+  }
+  
+  .menubar button {
+   background-color: var(--bg1);
+    border: transparent;
+  }
+  .menubar img,.close  img{
+    height: 32px;
+  }
+  
+  @media all and (max-width: 600px) {
+    .nav .menubar {
+      display: block;
+      position: absolute;
+      right: 30px;
+    }
+  
+    .nav-content {
+      box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(45px);
+      position: fixed;
+      z-index: 50;
+      width: 50%;
+      right: -100%;
+      transition: right 2s;
+      top: 0;
+      height: 100vh;
+      grid-template-columns: 100%;
+    }
+  
+    .nav-content ul {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+      font-size: 14px;
+      margin-top: 57px;
+      padding: 0 20px;
+      margin-bottom: 0px;
+    }
+  
+    .icon {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
+      padding: 0 20px;
+      top: 0;
+    }
+  
+    .icon button {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .close {
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+  

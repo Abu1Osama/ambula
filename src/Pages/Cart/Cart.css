@@ -1,0 +1,222 @@
+.cart-container {
+     /* max-width: 1200px; */
+     padding: 20px 80px;
+     margin: 20px auto;
+     /* padding: 20px; */
+     /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+     margin-top: 54px;
+     min-height: calc(100vh - 56px);
+     background: var(--bg5);
+ }
+  
+  
+  .cart-container h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .cart-items {
+    display: grid;
+  }
+  .top{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+  }
+  .cart-name{
+    overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+  }
+  
+  .cart-item {
+    background-color: #f2f2f2;
+    margin: 10px 0;
+    padding: 10px ;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    grid-template-columns: 20% 38% 20%  20%;
+    display: grid;
+    gap: 10px;
+    opacity: 1;
+    transition: height 2s, opacity 1s, padding 1s, margin 1s;
+  }
+  .cart-item img{
+    height: 100px;
+    object-fit: contain;
+    margin: auto;
+    border-radius: 16px;
+  }
+  .top h2{
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px dashed white;
+    background: var(--bg1);
+    color: white;
+   
+   
+  }
+  
+  .cart-item button {
+  background: var(--bg1);
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    width: max-content;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .cart-item button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  
+  .cart-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .cart-item p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .cart-item.removed {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cart-total {
+    width: 100%;
+    bottom: 0;
+    margin-top: 20px;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    padding-top: 20px;
+    background-color: #f2f2f2;
+  }
+  
+  .cart-total div {
+    background-color: #f2f2f2;
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cart-total p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .totalpay {
+    background-color: #4285f4;
+    color: #fff;
+  }
+  
+  .totalpaybutton {
+    background-color: #4285f4;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .totalpaybutton a {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+  }
+  
+  .totalpaybutton button {
+    background-image: linear-gradient(to right, #cb3115 0%, #f94a2a 51%, #cf2404 100%);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+  }
+  
+  .totalpaybutton button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+  .empty-cart{
+    margin-top: 10px;
+text-align: center;
+display: grid;
+justify-content: center;
+gap: 10px;
+  }
+  .empty-cart img{
+height: 300px;
+border-radius: 50%;
+  }
+  .empty-cart button{
+    padding: 10px;
+    border: none;
+    background-color:var(--bg1);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .empty-cart p{
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  @media screen and (max-width: 900px) {
+    .cart-container{
+      text-align: center;
+    }
+    .cart-item button{
+      width: 50%;
+      margin: auto;
+    }
+    .cart-container .cart-items .cart-item {
+      grid-template-columns: 100%;
+      padding: 20px;
+      justify-content: center;
+    }
+  }
+
+ 
+  @media screen and (max-width: 600px) {
+    .cart-container h1 {
+      font-size: 24px;
+    }
+    .cart-container .cart-items .cart-item {
+      grid-template-columns: 100%;
+      padding: 20px;
+      justify-content: center;
+    }
+    .top h2{
+      flex-grow: 1;
+      margin-top: 10px;
+    }
+    .cart-item button{
+      width: 100%;
+    }
+  }
+  
